@@ -8,7 +8,7 @@ class Solution:
         #         pallindromic_value += i.lower()
         
         left , right = 0 , len(s) - 1
-        is_pallindrome = True
+        
         while left < right:
             if not s[left].isalnum():
                 left  += 1
@@ -19,10 +19,10 @@ class Solution:
           
 
             if s[left].lower() != s[right].lower():
-                is_pallindrome = False
+                return False
                 break
             left += 1
             right-= 1
-        return is_pallindrome
+        return True
             
         
